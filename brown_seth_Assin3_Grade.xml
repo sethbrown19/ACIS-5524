@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<!-- DTD -->
+<!DOCTYPE root-element [
+    <!ELEMENT root-element (Major+)>
+    <!ELEMENT Major (Course)>
+    <!ELEMENT Course (Course_Number, Course_Name, Final_Grade, Semester)>
+    <!ATTLIST Course #REQUIRED>
+    <!ELEMENT Course_Number (#PCDATA)>
+    <!ELEMENT Course_Name  (#PCDATA)>
+    <!ELEMENT Final_Grade (#PCDATA)>
+    <!ELEMENT Semester (#PCDATA)>
+]>
+
+<!-- XML -->
+<root-element>
+    <Major>
+        <Course>
+            <Course_Number>
+                ACIS 5504
+            </Course_Number>
+            <Course_Name>
+                "Sys/ Database Concepts"
+            </Course_Name>
+            <Final_Grade>
+                "A"
+            </Final_Grade>
+            <Semester>
+                "Spring 2021"
+            </Semester>
+        </Course>
+        <Course>
+            <Course_Number>
+                MGT 5804
+            </Course_Number>
+            <Course_Name>
+                "Leader Tech-Based Org Virtual"
+            </Course_Name>
+            <Final_Grade>
+                "A"
+            </Final_Grade>
+            <Semester>
+                "Spring 2021"
+            </Semester>
+        </Course>
+        <Course>
+            <Course_Number>
+                CS 5044
+            </Course_Number>
+            <Course_Name>
+                "Object-Oriented Pgmming Java"
+            </Course_Name>
+            <Final_Grade>
+                "A"
+            </Final_Grade>
+            <Semester>
+                "Summer 2021"
+            </Semester>
+        </Course>
+        <Course>
+            <Course_Number>
+                CS 5040
+            </Course_Number>
+            <Course_Name>
+                "Intermed Data Struct/Algorithm"
+            </Course_Name>
+            <Final_Grade>
+                "WG"
+            </Final_Grade>
+            <Semester>
+                "Fall 2021"
+            </Semester>
+        </Course>
+        <Course>
+            <Course_Number>
+                CS 5244
+            </Course_Number>
+            <Course_Name>
+                "Web Application Development"
+            </Course_Name>
+            <Final_Grade>
+                "B"
+            </Final_Grade>
+            <Semester>
+                "Fall 2021"
+            </Semester>
+        </Course>
+        <Course>
+            <Course_Number>
+                CS 5254
+            </Course_Number>
+            <Course_Name>
+                "Mobile App Development"
+            </Course_Name>
+            <Final_Grade>
+                "A"
+            </Final_Grade>
+            <Semester>
+                "Spring 2022"
+            </Semester>
+        </Course>
+        <Course>
+            <Course_Number>
+                ACIS 5524
+            </Course_Number>
+            <Course_Name>
+                "Sys/ Database Concepts"
+            </Course_Name>
+            <Final_Grade>
+                "A"
+            </Final_Grade>
+            <Semester>
+                "Spring 2022"
+            </Semester>
+        </Course>
+        <Course>
+            <Course_Number>
+                ECE 5494
+            </Course_Number>
+            <Course_Name>
+                "Innovation in AI and ML"
+            </Course_Name>
+            <Final_Grade>
+                "A"
+            </Final_Grade>
+            <Semester>
+                "Spring 2022"
+            </Semester>
+        </Course>
+        <Course>
+            <Course_Number>
+                CS 5704
+            </Course_Number>
+            <Course_Name>
+                "Software Engineering"
+            </Course_Name>
+            <Final_Grade>
+                "A"
+            </Final_Grade>
+            <Semester>
+                "Spring 2022"
+            </Semester>
+        </Course>
+        <Course>
+            <Course_Number>
+                ECE 5480
+            </Course_Number>
+            <Course_Name>
+                "Cyber Security and the IOT"
+            </Course_Name>
+            <Final_Grade>
+                "A"
+            </Final_Grade>
+            <Semester>
+                "Summer 2022"
+            </Semester>
+        </Course>
+        <Course>
+            <Course_Number>
+                5564
+            </Course_Number>
+            <Course_Name>
+                "Health Information Technology"
+            </Course_Name>
+            <Final_Grade>
+                "A"
+            </Final_Grade>
+            <Semester>
+                "Summer 2022"
+            </Semester>
+        </Course>
+        <Course>
+            <Course_Number>
+                BIT 55594
+            </Course_Number>
+            <Course_Name>
+                "Web-Based Applications and Ecommerce"
+            </Course_Name>
+            <Final_Grade>
+                "A"
+            </Final_Grade>
+            <Semester>
+                "Summer 2022"
+            </Semester>
+        </Course>
+    </Major>
+</root-element>
+
+<!-- XSD -->
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Major">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="Course">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Course_Number" type="xs:string" />
+              <xs:element minOccurs="0" name="Course_Name" type="xs:string" />
+              <xs:element minOccurs="0" name="Final_Grade" type="xs:string" />
+              <xs:element minOccurs="0" name="Semester" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
